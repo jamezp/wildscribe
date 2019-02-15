@@ -1,0 +1,49 @@
+= Collator
+
+A simple utility to start a server, created the binary DMR file of the server model, create the messages and generate
+the WildScribe site.
+
+== Supported Properties
+
+|===
+| Property Name | Description | Default
+
+| `jboss.home`
+| The path to the servers home directory.
+| *Required* if the `JBOSS_HOME` directory is not set.
+
+| `model.directory`
+| The path to the directory where the DMR and message binaries will be stored.
+| `../models/standalone`
+
+| `generated.target.directory`
+| The path to where the site should be generated.
+| `../../wildscribe.github.io`
+
+| `url`
+| The URL where the site will be hosted.
+| https://wildscribe.github.io
+
+| `server.name`
+| The name of the server for the generated site.
+| The value from the `product-name` attribute on the running server.
+
+| `server.version`
+| The version of the server.
+| The value from the `product-version` attribute on the running server.
+
+| `additional.extensions`
+| A comma delimited value of additional extensions to be added.
+|
+
+|===
+
+== Supported Environment Variables
+
+|===
+| Name | Description
+
+| `JBOSS_HOME`
+| The path to the servers home directory. *Required* if the `jboss.home` system property is not set.
+
+|===
